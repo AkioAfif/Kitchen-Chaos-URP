@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 960671382499822735, guid: 770b53a58790189458b3c63b7e423912, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 75591dfafc9f0dd46a68220b012b5f35, type: 2}
     - target: {fileID: 4283425131653261987, guid: 770b53a58790189458b3c63b7e423912, type: 3}
       propertyPath: m_Name
       value: ClearCounter (1)
@@ -346,6 +350,17 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &357696637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 960671382499822735, guid: 770b53a58790189458b3c63b7e423912, type: 3}
+  m_PrefabInstance: {fileID: 41910972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85aea3a1edf1e114ab0bbc65e80186d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClearCounter
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +957,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 960671382499822735, guid: 770b53a58790189458b3c63b7e423912, type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 960671382499822735, guid: 770b53a58790189458b3c63b7e423912, type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 357696637}
     - target: {fileID: 4283425131653261987, guid: 770b53a58790189458b3c63b7e423912, type: 3}
       propertyPath: m_Name
       value: ClearCounter
