@@ -10,14 +10,14 @@ public class PlateCounter : BaseCounter
     private float spawnPlateTimer;
     private float spawnPlateTimeMax= 4f;
     private int spawnPlateAmount;
-    private int spwanPlateAmountMax = 4;
+    private int spawnPlateAmountMax = 4;
     private void Update()
     {
         spawnPlateTimer += Time.deltaTime;
         if (spawnPlateTimer > spawnPlateTimeMax)
         {
             spawnPlateTimer = 0;
-            if (spawnPlateAmount < spawnPlateTimeMax)
+            if (spawnPlateAmount < spawnPlateAmountMax)
             {
                 spawnPlateAmount++;
                 OnPlateSpawned?.Invoke(this, EventArgs.Empty);

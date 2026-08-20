@@ -92,7 +92,7 @@ public class StoveCounter : BaseCounter, IHasProgress
                     });
                     break; 
             }
-            Debug.Log(state);
+            
         }
         
     }
@@ -177,19 +177,6 @@ public class StoveCounter : BaseCounter, IHasProgress
         return FryingRecipeSO != null;
     }
 
-    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO)
-    {
-        FryingRecipeSO FryingRecipeSO = GetFryingRecipeSOWithInput(inputKitchenObjectSO);
-        if (FryingRecipeSO != null)
-        {
-            return FryingRecipeSO.output;
-
-        }
-        else
-        {
-            return null;
-        }
-    }
 
     private FryingRecipeSO GetFryingRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
