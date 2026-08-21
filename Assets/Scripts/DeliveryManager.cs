@@ -8,6 +8,8 @@ public class DeliveryManager : MonoBehaviour
 {
     public event EventHandler OnRecipeSpawned;
     public event EventHandler OnRecipeCompleted;
+    public event EventHandler OnrecipeSuccessed;
+    public event EventHandler OnrecipeFailed;
 
     public static DeliveryManager Instance { get; private set; }
     [SerializeField] private RecipeListSO recipeListSO;
@@ -79,13 +81,16 @@ public class DeliveryManager : MonoBehaviour
                     Debug.Log("Player Delivered A Correct Recipe");
                     waitingRecipeSOList.RemoveAt(i);
 
+                    
                     OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
+                    OnrecipeSuccessed?.Invoke(this, EventArgs.Empty);
                     return;
                 }
             }
         }
         //No matches found
         //Player did not deliver a correct recipe
+        OnrecipeFailed?.Invoke(this, EventArgs.Empty);
         
     }
 
