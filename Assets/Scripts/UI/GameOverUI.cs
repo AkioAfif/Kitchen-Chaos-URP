@@ -1,16 +1,36 @@
+using TMPro;
 using UnityEngine;
 
 public class GameOverUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private TextMeshProUGUI recipeDeliveredText;
+
+    private void Start()
     {
-        
+        KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
+        Hide();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void KitchenGameManager_OnStateChanged(object sender, System.EventArgs e)
     {
-        
+        if (KitchenGameManager.Instance.IsGameOverActive())
+        {
+            Show();
+            recipeDeliveredText.text = DeliveryManager.Instance.GetSuccesfulRecipeAmmount().ToString();
+        }
+        else
+        {
+            Hide();
+        }
+    }
+
+    private void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }
