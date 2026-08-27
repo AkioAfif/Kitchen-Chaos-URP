@@ -1,9 +1,20 @@
 using UnityEngine;
 using System;
 using NUnit.Framework.Internal.Commands;
+using Unity.VisualScripting;
 
 public class GameInput : MonoBehaviour
 {
+    public enum Binding
+    {
+        Move_Up,
+        Move_Down,
+        Move_Left,
+        Move_Right,
+        Interact,
+        Interact_Alternate,
+        Pause,
+    }
 
     public static GameInput Instance {  get; private set; }
 
@@ -51,6 +62,34 @@ public class GameInput : MonoBehaviour
 
             inputVector = inputVector.normalized;
             return inputVector;
+    }
+
+    public string GetBindingText(Binding binding)
+    {
+        switch (binding)
+        {
+            default:
+            case Binding.Move_Up:
+                return playerInputAction.Player.Move.bindings[1].ToDisplayString(); 
+            case Binding.Move_Down:
+                return playerInputAction.Player.Move.bindings[2].ToDisplayString();
+                
+            case Binding.Move_Left:
+                return playerInputAction.Player.Move.bindings[3].ToDisplayString();
+                
+            case Binding.Move_Right:
+                return playerInputAction.Player.Move.bindings[4].ToDisplayString();
+                
+            case Binding.Interact:
+                return playerInputAction.Player.Interact.bindings[0].ToDisplayString();
+                
+            case Binding.Interact_Alternate:
+                return playerInputAction.Player.InteractAlternate.bindings[0].ToDisplayString();
+                
+            case Binding.Pause:
+                return playerInputAction.Player.Pause.bindings[0].ToDisplayString();
+                
+        }
     }
 }
 

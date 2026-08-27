@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1787753492
+  lastShownTimestamp: 1787840564
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1787753493
+  checkedLastUpdateTimestamp: 1787840564
   lastQOTDResponse:
     questionId: 336
     questionText: What Types can you natively store with PlayerPrefs?
@@ -27,7 +27,7 @@ MonoBehaviour:
     answerC: string, int, float
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1787753493
+  lastQotdTimestamp: 1787840564
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle_EndsSoon.png
     topText: Get 80% OFF on ALL my Courses and Games!!! (ENDS AUGUST)
@@ -35,11 +35,11 @@ MonoBehaviour:
     bottomText: DONT MISS the latest important trends, sign up for my FREE Weekly
       Newsletter!
     bottomLink: gamedevreport
-  lastDynamicHeaderTimestamp: 1787753493
+  lastDynamicHeaderTimestamp: 1787840564
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1787753493
+  websiteLatestMessageTimestamp: 1787840564
   websiteLatestVideos:
     videos:
     - youTubeId: 2QKVo8m5ozQ
@@ -51,4 +51,4 @@ MonoBehaviour:
       title: The SECRET WEAPON making Unity 7 AWESOME - CoreCLR Explained
     - youTubeId: xsQTCKSHte8
       title: TOP 10 NEW Games, Made with Unity! (JULY 2026)
-  websiteLatestVideosTimestamp: 1787753493
+  websiteLatestVideosTimestamp: 1787840564
