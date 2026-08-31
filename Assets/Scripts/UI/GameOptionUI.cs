@@ -29,6 +29,8 @@ public class GameOptionUI : MonoBehaviour
     [SerializeField] private Button interactAlternateButton;
     [SerializeField] private Button pauseButton;
 
+    [SerializeField] private Transform presstoRebindKeyTransform;
+
 
     private void Awake()
     {
@@ -50,12 +52,42 @@ public class GameOptionUI : MonoBehaviour
         {
             Hide();
         });
+
+        moveUpButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Move_Up);
+        });
+        moveDownButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Move_Down);
+        });
+        moveLeftButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Move_Left);
+        });
+        moveRightButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Move_Right);
+        });
+        interactButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Interact);
+        });
+        interactAlternateButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Interact_Alternate);
+        });
+        pauseButton.onClick.AddListener(() =>
+        {
+            RebindBinding(GameInput.Binding.Pause);
+        });
     }
 
     public void Start()
     {
         KitchenGameManager.Instance.OnGameUnpaused += KitchenGameManager_OnGameUnpaused;
         updateVisual();
+        HidePressTorebindKey();
         Hide();
     }
 
@@ -87,7 +119,25 @@ public class GameOptionUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void ShowPressTorebindKey()
+    {
+        presstoRebindKeyTransform.gameObject.SetActive(true);
+    }
 
+    private void HidePressTorebindKey()
+    {
+        presstoRebindKeyTransform.gameObject.SetActive(false);
+    }
+
+    private void RebindBinding(GameInput.Binding binding)
+    {
+        ShowPressTorebindKey();
+        GameInput.Instance.Rebinding(binding, () => 
+        {
+            HidePressTorebindKey();
+            updateVisual();
+        });
+    }
 }
 
 
