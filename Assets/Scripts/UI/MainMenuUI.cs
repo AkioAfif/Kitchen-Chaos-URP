@@ -10,6 +10,7 @@ public class MainMenuUI : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1f;
+        playButton.Select();
 
         playButton.onClick.AddListener(() =>
         {

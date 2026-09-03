@@ -104,7 +104,7 @@
                     "id": "b9745473-c693-4b69-a93f-4798ad09eac4",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "StickDeadzone(min=0.5)",
                     "groups": "",
                     "action": "Move",
                     "isComposite": true,
@@ -223,7 +223,7 @@
                 {
                     "name": "",
                     "id": "ea07b63f-520e-476a-8cff-98b41b5223bd",
-                    "path": "<Gamepad>/select",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
